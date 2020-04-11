@@ -1,0 +1,23 @@
+{
+  "name": "hllibrary",
+  "version": "1.0.0",
+  "description": "My first library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "start": "npm run webpack",
+    "webpack": "webpack -d --watch"
+  },
+  "author": "Heather Lyman",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
+  }
+}
