@@ -1,7 +1,19 @@
 import _ from "./underdash";
 
-const app = document.querySelector("#app");
-app.innerHTML = _.first;
+const first = document.querySelector("#first");
+const last = document.querySelector("#last");
+const diff = document.querySelector("#diff");
+const intersect = document.querySelector("#intersect");
+
+const firstItems = _.first([1, 2, 3, 4], 2);
+const lastItems = _.last([1, 2, 3, 4], 2);
+const difference = _.difference(["bob", "dude", "loop"], ["dude", "loop"]);
+const intersection = _.intersection(["bob", "dude", "loop"], ["dude", "loop"]);
+
+first.innerHTML = JSON.stringify(firstItems);
+last.innerHTML = JSON.stringify(lastItems);
+diff.innerHTML = JSON.stringify(difference);
+intersect.innerHTML = JSON.stringify(intersection);
 
 //import { myMath } from "./myMath";
 //import { dice } from "./dice";
