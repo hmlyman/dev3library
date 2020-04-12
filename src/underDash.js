@@ -159,5 +159,16 @@ export default (() => {
       array.splice(i, 1);
       return array, "_.rest isn't working";
     },
+    compact(array) {
+      if (!Array.isArray(array)) {
+        throw new Error(
+          `${JSON.stringify(
+            array
+          )} is not an array. The compact function only works on arrays.`
+        );
+      }
+      let filtered = array.filter(Boolean);
+      return filtered;
+    },
   };
 })();

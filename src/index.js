@@ -9,6 +9,7 @@ const unzip = document.querySelector("#unzip");
 const union = document.querySelector("#union");
 const initial = document.querySelector("#initial");
 const rest = document.querySelector("#rest");
+const compact = document.querySelector("#compact");
 
 const firstItems = _.first([1, 2, 3, 4], 2);
 const lastItems = _.last([1, 2, 3, 4], 2);
@@ -24,6 +25,7 @@ const unzipItems = _.unzip([
 const unionItems = _.union([1, 2, 3, 4], [3, 4, 5, 6]);
 const initialItems = _.initial([1, 2, 3, "tree", "flower"]);
 const restItems = _.rest([1, 2, 3, 4, "tree", "flower"], 3);
+const compactItems = _.compact([0, 1, false, 2, "", 3]);
 
 first.innerHTML = JSON.stringify(firstItems);
 last.innerHTML = JSON.stringify(lastItems);
@@ -34,6 +36,7 @@ unzip.innerHTML = JSON.stringify(unzipItems);
 union.innerHTML = JSON.stringify(unionItems);
 initial.innerHTML = JSON.stringify(initialItems);
 rest.innerHTML = JSON.stringify(restItems);
+compact.innerHTML = JSON.stringify(compactItems);
 
 //import { myMath } from "./myMath";
 //import { dice } from "./dice";
