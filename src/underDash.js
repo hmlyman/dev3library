@@ -99,7 +99,11 @@ export default (() => {
           )} is not an array. The unzip function only works on arrays.`
         );
       }
-      return "_.unzip isn't working";
+      return array[0].map(function (_, i) {
+        return array.map(function (array) {
+          return array[i];
+        });
+      });
     },
     union(array1, array2) {
       if (!Array.isArray(array1) || !Array.isArray(array2)) {
@@ -156,8 +160,7 @@ export default (() => {
         );
       }
       let i = index;
-      array.splice(i, 1);
-      return array, "_.rest isn't working";
+      return array.slice(i);
     },
     compact(array) {
       if (!Array.isArray(array)) {
